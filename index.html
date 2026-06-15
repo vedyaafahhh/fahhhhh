@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy 6 Months💗</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- ================= PAGE 1 ================= -->
+
+    <section class="page active" id="page1">
+
+        
+
+        <div class="cover-container">
+
+            <div class="cover-image">
+
+                <img src="images/cover.jpg" alt="Our Photo">
+
+            </div>
+
+            <div class="password-box">
+
+                <h1>Think about it</h1>
+
+                <p>Enter the Code</p>
+
+                <input type="password" id="passwordInput" readonly>
+
+                <div class="keypad">
+
+                    <button onclick="addNumber('1')">1</button>
+                    <button onclick="addNumber('2')">2</button>
+                    <button onclick="addNumber('3')">3</button>
+
+                    <button onclick="addNumber('4')">4</button>
+                    <button onclick="addNumber('5')">5</button>
+                    <button onclick="addNumber('6')">6</button>
+
+                    <button onclick="addNumber('7')">7</button>
+                    <button onclick="addNumber('8')">8</button>
+                    <button onclick="addNumber('9')">9</button>
+
+                    <button onclick="clearPassword()">⌫</button>
+                    <button onclick="addNumber('0')">0</button>
+                    <button onclick="checkPassword()">❤️</button>
+
+                </div>
+
+                <p id="message"></p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+<!-- ================= PAGE 2 ================= -->
+
+<section class="page" id="page2">
+
+    <h1 class="page-heading">Photo Booth</h1>
+
+    <div class="photobooth-board">
+
+        <div class="booth-header">
+            PHOTO BOOTH
+        </div>
+
+        <div class="booth-body">
+
+            <div class="booth-left">
+
+                <div class="mini-heart">❤️</div>
+
+                <div class="mini-card">
+                    Insert<br>💵
+                </div>
+
+                <div class="mini-card">
+                    Smile<br>📷
+                </div>
+
+                <img
+                    src="images/photostrip.png"
+                    class="photo-strip-image"
+                    alt="Photo Strip">
+
+            </div>
+
+            <div class="booth-curtain"></div>
+
+        </div>
+
+    </div>
+
+    <button class="back-btn" onclick="showPage(1)">⬅ Back</button>
+    <button class="next-btn" onclick="showPage(3)">Next ➡</button>
+
+</section>
+
+
+    <!-- ================= PAGE 3 ================= -->
+
+    <section class="page" id="page3">
+
+        <div class="small-heart">❤️</div>
+        <div class="heart-sticker">❤️</div>
+
+        <h1 class="page-heading">Our Scrapbook</h1>
+
+        <div class="scrapbook">
+
+            <div class="polaroid">
+                <img src="images/scrap1.jpg">
+                <p>Write memory here</p>
+            </div>
+
+            <div class="polaroid">
+                <img src="images/scrap2.jpg">
+                <p>Write memory here</p>
+            </div>
+
+            <div class="polaroid">
+                <img src="images/scrap3.jpg">
+                <p>Write memory here</p>
+            </div>
+
+            <div class="polaroid">
+                <img src="images/scrap4.jpg">
+                <p>Write memory here</p>
+            </div>
+
+        </div>
+
+<div class="scrapbook-note">
+
+    Write your memory here.
+
+</div>
+
+        <button class="back-btn" onclick="showPage(2)">⬅ Back</button>
+        <button class="next-btn" onclick="showPage(4)">Next ➡</button>
+
+    </section>
+
+    <!-- ================= PAGE 4 ================= -->
+
+    <section class="page" id="page4">
+
+        <div class="letter-container">
+
+            <h1 class="page-heading">A Letter For You 💌</h1>
+
+            <div class="letter">
+
+                <p>
+
+                    WRITE YOUR LETTER HERE
+
+                    <br><br>
+
+                    Remove this text and write your own letter.
+
+                    <br><br>
+
+                    You can write as much as you want.
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <button class="back-btn" onclick="showPage(3)">⬅ Back</button>
+        <button class="next-btn" onclick="showPage(5)">Next ➡</button>
+
+    </section>
+
+    <!-- ================= PAGE 5 ================= -->
+
+    <section class="page" id="page5">
+
+        <h1 class="page-heading">"Play Labyrinth by Taylor Swift"</h1>
+
+        <div class="video-frame">
+
+            <video controls>
+
+                <source src="video/memory.mp4" type="video/mp4">
+
+            </video>
+
+        </div>
+
+        <button class="back-btn" onclick="showPage(4)">⬅ Back</button>
+        <button class="next-btn" onclick="showPage(6)">Next ➡</button>
+
+    </section>
+
+    <!-- ================= PAGE 6 ================= -->
+
+    <section class="page" id="page6">
+
+        <div class="final-page">
+
+            <p class="thankyou">
+
+                Write your final note here.
+
+            </p>
+
+            <h1 class="final-title">
+
+                Happy 6 Months To Us 💗
+
+            </h1>
+
+            <p class="ending">
+
+                And this is only the beginning...
+
+            </p>
+
+        </div>
+
+        <button class="back-btn" onclick="showPage(5)">⬅ Back</button>
+
+    </section>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
