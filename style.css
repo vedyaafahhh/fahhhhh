@@ -1,0 +1,489 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:linear-gradient(
+        135deg,
+        #ffe5ec,
+        #fff1f5,
+        #fff7fa
+    );
+    overflow-x:hidden;
+}
+
+/* ================= PAGES ================= */
+
+.page{
+    width:100%;
+    height:100vh;
+    display:none;
+    position:relative;
+    padding:40px;
+}
+
+.page.active{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    animation:fadeIn .8s ease;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* ================= HEADINGS ================= */
+
+.page-heading{
+    position:absolute;
+    top:30px;
+    left:50%;
+    transform:translateX(-50%);
+    font-family:'Playfair Display',serif;
+    font-size:3rem;
+    color:#d63384;
+}
+
+/* ================= STICKERS ================= */
+
+.heart-sticker{
+    position:absolute;
+    top:40px;
+    left:120px;
+    font-size:2rem;
+}
+
+.small-heart{
+    position:absolute;
+    top:100px;
+    right:150px;
+    font-size:1.8rem;
+}
+
+.kiss-sticker{
+    position:absolute;
+    top:120px;
+    right:180px;
+    font-size:1.8rem;
+}
+
+/* ================= PAGE 1 ================= */
+
+.cover-container{
+    width:100%;
+    display:flex;
+    justify-content:space-evenly;
+    align-items:center;
+    gap:60px;
+}
+
+.cover-image img{
+    width:420px;
+    height:520px;
+    object-fit:cover;
+    border:10px solid white;
+    border-radius:25px;
+    box-shadow:0 15px 30px rgba(0,0,0,0.15);
+}
+
+.password-box{
+    width:320px;
+    background:white;
+    padding:25px;
+    border-radius:20px;
+    box-shadow:0 15px 30px rgba(0,0,0,0.1);
+    text-align:center;
+}
+
+.password-box h1{
+    font-family:'Playfair Display',serif;
+    color:#d63384;
+    margin-bottom:15px;
+}
+
+.password-box p{
+    margin-bottom:12px;
+}
+
+#passwordInput{
+    width:100%;
+    height:50px;
+    border:none;
+    border-radius:12px;
+    background:#fff0f5;
+    text-align:center;
+    font-size:1.3rem;
+    letter-spacing:8px;
+    margin-bottom:18px;
+}
+
+.keypad{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:10px;
+}
+
+.keypad button{
+    height:55px;
+    border:none;
+    border-radius:12px;
+    background:#ffd6e7;
+    cursor:pointer;
+    font-size:1rem;
+    transition:.3s;
+}
+
+.keypad button:hover{
+    background:#ffb6d0;
+    transform:scale(1.05);
+}
+
+#message{
+    margin-top:12px;
+    color:#d63384;
+    font-weight:600;
+}
+
+/* ================= PHOTOBOOTH PAGE ================= */
+
+#page2{
+    flex-direction:column;
+}
+
+.photobooth-board{
+
+    margin-top:70px;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+}
+
+.booth-header{
+
+    background:#2f2f2f;
+    color:white;
+
+    padding:15px 50px;
+
+    font-family:'Playfair Display',serif;
+    font-size:1.7rem;
+    letter-spacing:2px;
+
+    border-radius:8px 8px 0 0;
+
+    box-shadow:0 6px 12px rgba(0,0,0,.15);
+}
+
+.booth-body{
+
+    width:500px;
+    height:420px;
+
+    background:#d2b48c;
+
+    display:flex;
+
+    position:relative;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+.booth-left{
+
+    width:45%;
+
+    position:relative;
+
+    padding:25px;
+}
+
+.mini-heart{
+
+    font-size:1.4rem;
+
+    margin-bottom:20px;
+}
+
+.mini-card{
+
+    width:60px;
+
+    background:white;
+
+    padding:8px;
+
+    font-size:.7rem;
+
+    text-align:center;
+
+    border-radius:4px;
+
+    margin-bottom:12px;
+
+    box-shadow:0 3px 8px rgba(0,0,0,.1);
+}
+
+.booth-curtain{
+
+    width:55%;
+
+    background:
+    repeating-linear-gradient(
+        90deg,
+        #c1121f 0px,
+        #c1121f 18px,
+        #d62839 18px,
+        #d62839 32px
+    );
+}
+
+.photo-strip-image{
+
+    position:absolute;
+
+    left:35px;
+    bottom:-110px;
+
+    width:140px;
+
+    filter:drop-shadow(
+        0 8px 12px rgba(0,0,0,.25)
+    );
+
+    animation:stripDrop 1.3s ease;
+}
+
+@keyframes stripDrop{
+
+    from{
+
+        transform:
+        translateY(-80px);
+
+        opacity:0;
+    }
+
+    to{
+
+        transform:
+        translateY(0);
+
+        opacity:1;
+    }
+}
+
+/* ================= SCRAPBOOK ================= */
+
+#page3{
+    flex-direction:column;
+}
+
+.scrapbook{
+    margin-top:100px;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:30px;
+}
+
+.polaroid{
+    width:220px;
+    background:white;
+    padding:12px;
+    border-radius:10px;
+    box-shadow:0 10px 20px rgba(0,0,0,0.15);
+}
+
+.polaroid:nth-child(odd){
+    transform:rotate(-3deg);
+}
+
+.polaroid:nth-child(even){
+    transform:rotate(3deg);
+}
+
+.polaroid img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.polaroid p{
+    text-align:center;
+    margin-top:10px;
+    font-size:.95rem;
+}
+
+.scrapbook-note{
+
+    margin-top:30px;
+
+    max-width:700px;
+
+    text-align:center;
+
+    line-height:1.8;
+
+    font-size:1rem;
+}
+
+
+/* ================= VIDEO PAGE ================= */
+
+#page5{
+    flex-direction:column;
+}
+
+#page5 .page-heading{
+    font-size:2.3rem;
+}
+
+.video-frame{
+    margin-top:80px;
+    background:white;
+    padding:20px;
+    border-radius:20px;
+    border:5px solid #ffc2d1;
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
+}
+
+.video-frame video{
+    width:800px;
+    max-width:90vw;
+    border-radius:15px;
+}
+
+/* ================= FINAL PAGE ================= */
+
+.final-container{
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:0 80px;
+}
+
+.final-text{
+
+    width:65%;
+
+    text-align:left;
+}
+
+.thankyou{
+
+    font-size:1.2rem;
+
+    margin-bottom:20px;
+
+    line-height:1.8;
+}
+
+.final-title{
+
+    font-family:'Playfair Display',serif;
+
+    font-size:3.2rem;
+
+    color:#d63384;
+
+    margin-bottom:15px;
+}
+
+.ending{
+
+    font-size:1.2rem;
+
+    line-height:1.8;
+}
+
+.final-image img{
+
+    width:300px;
+
+    height:300px;
+
+    object-fit:cover;
+
+    border-radius:20px;
+
+    border:8px solid white;
+
+    box-shadow:0 10px 20px rgba(0,0,0,.15);
+}
+
+/* ================= BUTTONS ================= */
+
+.next-btn,
+.back-btn{
+    position:absolute;
+    bottom:25px;
+    border:none;
+    background:#ff8fab;
+    color:white;
+    padding:14px 28px;
+    border-radius:50px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.next-btn:hover,
+.back-btn:hover{
+    transform:scale(1.05);
+}
+
+.next-btn{
+    right:25px;
+}
+
+.back-btn{
+    left:25px;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:900px){
+
+    .cover-container{
+        flex-direction:column;
+    }
+
+    .cover-image img{
+        width:300px;
+        height:380px;
+    }
+
+    .password-box{
+        width:90%;
+    }
+
+    .page-heading{
+        font-size:2rem;
+    }
+
+    .final-title{
+        font-size:3rem;
+    }
+
+    .video-frame video{
+        width:95%;
+    }
+}
